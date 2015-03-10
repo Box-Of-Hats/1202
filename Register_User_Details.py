@@ -9,6 +9,8 @@
 		}
 """
 
+#A function that converts the user inputs fromn the registration page into a single string.
+
 def Register_User_Details(studentNumber,course,yearOfStudy):
 	currentUser = (str(studentNumber) + "//" + str(course) + "//" + str(yearOfStudy))
 	return(currentUser)
