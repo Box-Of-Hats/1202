@@ -3,8 +3,9 @@ import os
 """
 This is how the student class will have to be defined in another file to work
 with the DataHandler.
-
+"""
 class Student:
+
     def __init__(self,
                  student_id,
                  year_of_study,
@@ -16,7 +17,7 @@ class Student:
         self.course = course
         self.vark_answers = vark_answers
         self.hm_answers = hm_answers
-"""
+
 
 
 class DataHandler:
@@ -52,6 +53,10 @@ class DataHandler:
         dataFile = open('data.dat', 'rb')
         self.data_table = pickle.load(dataFile)
         dataFile.close()
+
+    def retrieveROW(self,n):
+        for row in self.data_table:
+            return(row[n])
 
 
 def main():
