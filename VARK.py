@@ -1,4 +1,4 @@
-def main():
+def varkQuestions():
     print("\n")
     questions = [("What is your preferred revision method?",
         "A. Listening to audio/lectures.",
@@ -56,7 +56,7 @@ def main():
     print(answers)
 
 if __name__ == '__main__':
-    main()
+    varkQuestions()
 
 
 """
@@ -64,6 +64,4 @@ a = Audio things.
 b = Visual things
 c = read/write things
 d = Kinesthetic things
-
 """
-
