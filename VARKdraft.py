@@ -42,7 +42,7 @@ def main():
         counter=False
         while not counter:
          a = input("Answer: ")
-         if a in ('a','b','c','d'):
+         if a.lower() in ('a','b','c','d'):
           print("Your answer is = " + a.upper() + "\n")
           answers.append(a)
           counter=True
