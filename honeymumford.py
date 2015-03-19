@@ -1,4 +1,4 @@
-def main():
+def hmQuestions():
 	print("\n")
 	questions = [("When learning about a new programming concept, I: ",
 		"A. Like to see how it could be applied to a real life project.",
@@ -49,5 +49,5 @@ def main():
 
 	print(answers)
 
-if __name__ == '__main__':
-	main()
+if __name__ == '__hmQuestions__':
+	hmQuestions()
