@@ -1,31 +1,48 @@
+def main():
+	print("\n")
+	questions = [("You have a bug in your code but don't know how to fix it - what do you do?",
+		"A. Ask your lecturer to explain the bug to you",
+		"B. You watch a video of somebody showing how the bug works and how it can be fixed",
+		"C. Keep changing your code until the bug disappears",
+		"D. Read about bugs in a programming book"),
 
-#print the question
-print ("What is your preferred revision method?")
+	("What is your most effective revision method?",
+		"A. Listening to audio/lectures",
+	 	"B. Watching visual footage online",
+	 	"C. Taking/reading notes",
+	 	"D. Practicing work by going over examples",
+		),
 
-#save the options as variables
-var1 = '1. Listening to audio/lectures (Audio)'
-var2 = '2. Watching visual footage online (Visual)'
-var3 = '3.  Taking/reading notes (Read/Write)'
-var4 = '4. Practicing work by going over examples (Kinaesthetic)'
+	 ("You want to build your own computer but don't know where to start. What do you do?",
+	 	"A. Read about different computer components online",
+	 	"B. Take apart a different computer to try and understand how the components fit together",
+	 	"C. Listen to a podcast about computer building",
+	 	"D. Watch a video of somebody building a computer",
+	 	),
+	 ("Question 4",
+	 	"A. ",
+	 	"B. ",
+	 	"C. ",
+	 	"D. ",
+	 	),
+	 ("Question 5",
+	 	"A. ",
+	 	"B. ",
+	 	"C. ",
+	 	"D. ",
+	 )]
 
-#display the options on screen
-print var1 +"\n"+ var2 +"\n"+ var3 +"\n"+ var4
 
-#Take user's input as option number and saving it in option1
-option1=raw_input("Enter your choice (only one)-1, 2, 3 or 4 : ")
+	answers = []
 
+	for quest in questions:
+		print(quest[0] + "\n")
+		print(quest[1] + "\n" + quest[2] + "\n" + quest[3] + "\n" + quest[4])
+		a = raw_input("Answer: ")
+		print("Your answer is = " + a.upper() + "\n")
+		answers.append(a)
+		
+	print(answers)
 
-#check which option has user selected and assign answer1 value accordingly
-if option1=='1':
-    answer1=var1
-elif option1=='2':
-    answer1=var2
-elif option1=='3':
-    answer1=var3
-elif option1=='4':
-    answer1=var4
-else :
-    answer1="Sorry! The input is incorrect"
-    
-
-print "User's preferred revision method is "+answer1
+if __name__ == '__main__':
+	main()
