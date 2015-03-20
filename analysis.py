@@ -13,20 +13,18 @@ student_id,year of study, course, VARK, HM
 #Used to initialise dataHandler:
 
 dataHandler = DataHandler()
-
-
+"""
 #Used to create student .DAT:
-myStudent = Student('0000001', '1', 'Computer Science', ['a', 'a', 'a', 'a'], ['a', 'b', 'c', 'd'])
+myStudent = Student('0000001', '1', 'Computer Science', ['a', 'a', 'a', 'a'], ['a', 'a', 'a', 'a'])
 dataHandler.add_data(myStudent)
 
-myStudent = Student('0000002', '1', 'Business Studies', ['a', 'b', 'b', 'b'], ['a', 'd', 'c', 'd'])
+myStudent = Student('0000002', '1', 'Business Studies', ['a', 'b', 'c', 'b'], ['a', 'b', 'c', 'b'])
 dataHandler.add_data(myStudent)
 
 myStudent = Student('0000003', '2', 'Business Studies', ['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd'])
 dataHandler.add_data(myStudent)
-#######################################
 
-
+"""
 
 #Finds the VARK scores for an idividual student.
 #Parameter should be a tuple of students details such as ('ID', 'YEAR', 'COURSE', [VARK,], [HM]):
@@ -85,6 +83,7 @@ def analyseHM(student):
 
 
 def analyseAllHM(DataFileName):
+	print("Honey and Mumford")
 	inFile = pickle.load(open(DataFileName,"rb"))
 	#Initialise all totals as 0:
 	total_pragmatist = 0
@@ -96,10 +95,9 @@ def analyseAllHM(DataFileName):
 		#Set answerlist to equal the list of the students answers for H&M questionnaire:
 		answerlist = student[4]
 		#Print list for debugging:
-		print(answerlist)
+		#print(answerlist)
 		#Iterate through answers in the answerlist:
 		for answer in answerlist:
-			print(answer)
 			if answer == "a":
 				total_pragmatist += 1
 			elif answer == "b":
@@ -110,10 +108,44 @@ def analyseAllHM(DataFileName):
 				total_theorist += 1
 			else:
 				print("Error with answer: " + str(answer))
-			print("Total pragmatist: " + str(total_pragmatist))
-			print("Total reflector: " + str(total_reflector))
-			print("Total activist: " + str(total_activist))
-			print("Total theorist: " + str(total_activist))
+	print("Total pragmatist: " + str(total_pragmatist))
+	print("Total reflector: " + str(total_reflector))
+	print("Total activist: " + str(total_activist))
+	print("Total theorist: " + str(total_theorist))
+
+
+
+def analyseAllVARK(DataFileName):
+	print("VARK")
+	inFile = pickle.load(open(DataFileName,"rb"))
+	#Initialise all totals as 0:
+	total_audio = 0
+	total_visual = 0
+	total_read = 0
+	total_kinaestethic = 0
+	#Iterate through the different students:
+	for student in inFile:
+		#Set answerlist to equal the list of the students answers for H&M questionnaire:
+		answerlist = student[3]
+		#Print list for debugging:
+		#print(answerlist)
+		#Iterate through answers in the answerlist:
+		for answer in answerlist:
+			if answer == "a":
+				total_audio += 1
+			elif answer == "b":
+				total_visual += 1
+			elif answer == "c":
+				total_read += 1
+			elif answer == "d":
+				total_kinaestethic += 1
+			else:
+				print("Error with answer: " + str(answer))
+	print("Total audio: " + str(total_audio))
+	print("Total visual: " + str(total_visual))
+	print("Total reading/writing: " + str(total_read))
+	print("Total kinaesthetic: " + str(total_kinaestethic))
+					
 					
 
 
@@ -127,6 +159,8 @@ for student in a:
 	analyseVARK(student)
 """
 analyseAllHM("data.dat")
+
+analyseAllVARK("data.dat")
 #dataHandler.retrieveROW(4)
 
 #-print(dataHandler.print_data())
