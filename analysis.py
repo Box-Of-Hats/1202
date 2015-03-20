@@ -161,6 +161,9 @@ for student in a:
 analyseAllHM("data.dat")
 
 analyseAllVARK("data.dat")
-#dataHandler.retrieveROW(4)
+
 
 #-print(dataHandler.print_data())
+
+#student = a[-1]
+#analyseVARK(student)
