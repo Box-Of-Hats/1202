@@ -39,7 +39,7 @@ def varkQuestions():
         print(quest[0] + "\n")
         print(quest[1] + "\n" + quest[2] + "\n" + quest[3] + "\n" + quest[4])
        
-        counter=False
+        counter = False
         while not counter:
          a = input("Answer: ")
          if a.lower() in ('a','b','c','d'):
@@ -47,8 +47,8 @@ def varkQuestions():
           answers.append(a)
           counter=True
          else:
-          a='na'
-          print("The option does not exist.Please Try Again")
+          a = 'na'
+          print("The option does not exist. Please Try Again")
           
          
          
@@ -61,7 +61,7 @@ if __name__ == '__main__':
 
 """
 a = Audio things.
-b = Visual things
-c = read/write things
-d = Kinesthetic things
+b = Visual things.
+c = read/write things.
+d = Kinesthetic things.
 """
