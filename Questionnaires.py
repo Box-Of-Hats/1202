@@ -2,12 +2,14 @@ from tkinter import *
 
 class Application(Frame):
 	def menu_page(self):
+		#Create all the widgets for the menu
 		Questionnaires = Button(root, text = "Start Questionnaires", command = lambda: self.frame_clearer("start", Questionnaires, ViewResults))
 		ViewResults = Button(root, text = "View All Results", command= lambda: self.frame_clearer("results", Questionnaires, ViewResults))
 		Questionnaires.pack({"side" : "top"})
 		ViewResults.pack({"side": "top"})
 		
 	def start_page(self):
+		#Create all the widgets for registration page
 		yearOfStudy = 0
 		courseType = ""
 		label1 = Label(root, text = "Student Number")
@@ -37,6 +39,7 @@ class Application(Frame):
 		print("results")
 
 	def questions_page(self):
+		#Create widgets for questions page
 		answer = ""
 		label1 = Label(root, text = "......")
 		label1.pack()
@@ -56,8 +59,10 @@ class Application(Frame):
 		print("personal")
 
 	def frame_clearer(self, nextPage, *remover):
+		#Loop through all the widgets on previous page and remove them.
 		for x in remover:
 			x.pack_forget()
+		#Check first parameter and load up the next page being displayed.
 		if nextPage == "start":
 			self.start_page()
 		elif nextPage == "results":
@@ -70,6 +75,7 @@ class Application(Frame):
 			self.menu_page()
 
 	def __init__(self, master=None):
+		#Initiate the frame.
 		Frame.__init__(self, master)
 		self.pack()
 		self.menu_page()
