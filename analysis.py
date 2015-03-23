@@ -161,9 +161,10 @@ for student in a:
 analyseAllHM("data.dat")
 
 analyseAllVARK("data.dat")
-
+print("\n")
 
 #-print(dataHandler.print_data())
 
 #student = a[-1]
-#analyseVARK(student)
+analyseVARK(('0000001', '1', 'Computer Science', ['a', 'c', 'a', 'a'], ['d', 'd', 'c', 'a']))
+analyseHM(('0000001', '1', 'Computer Science', ['a', 'b', 'c', 'd'], ['a', 'a', 'a', 'a']))

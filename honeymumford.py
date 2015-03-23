@@ -1,6 +1,6 @@
 def hmQuestions():
 	print("\n")
-	questions = [("When learning about a new programming concept, I: ",
+	questionsHM = [("When learning about a new programming concept, I: ",
 		"A. Like to see how it could be applied to a real life project.",
 		"B. Think about previous programming work I have done and how the new concept would be used to improve it. ",
 		"C. Experiment with it by using it in my own projects to help me learn about how it works and why it could be useful.",
@@ -32,7 +32,7 @@ def hmQuestions():
 
 	answers = []
 
-	for quest in questions:
+	for quest in questionsHM:
 		print(quest[0] + "\n")
 		print(quest[1] + "\n" + quest[2] + "\n" + quest[3] + "\n" + quest[4])
 

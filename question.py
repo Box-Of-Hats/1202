@@ -80,7 +80,7 @@ def askQuestions(questions):
 
 
 #To run:
-askQuestions(VARKquestions)
-print("BEGIN HM")
-askQuestions(HMquestions)
+#askQuestions(VARKquestions)
+#print("BEGIN HM")
+#askQuestions(HMquestions)
 
