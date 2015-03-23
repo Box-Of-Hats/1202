@@ -1,6 +1,6 @@
 def varkQuestions():
     print("\n")
-    questions = [("What is your preferred revision method?",
+    questionsVARK = [("What is your preferred revision method?",
         "A. Listening to audio/lectures.",
         "B. Watching visual footage online.",
         "C. Taking/reading notes.",
